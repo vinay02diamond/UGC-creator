@@ -7,26 +7,17 @@
     <title>Document</title>
 
     <!-- libraries CSS -->
-    <link rel="stylesheet" href="assets/font/flaticon_jio_-_influencer.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css">
-    <link rel="stylesheet" href="assets/vendor/plyr/plyr.css">
-    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css">
-    <link rel="stylesheet" href="assets/vendor/no-ui-slider/nouislider.min.css">
+    <link rel="stylesheet" href="main-file/assets/font/flaticon_jio_-_influencer.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/plyr/plyr.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/no-ui-slider/nouislider.min.css">
 
     <!-- custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="main-file/assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style2.css"> -->
-    <style>
-        /* Fix button gradient to show by default */
-        .jo-btn::before {
-            opacity: 1 !important;
-        }
-        .jo-btn:hover::before {
-            opacity: 0.8 !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -35,7 +26,7 @@
         <div>
             <!-- heading -->
             <div class="jo-sidebar__heading d-flex justify-content-between align-items-center">
-                <a href="#"><img src="assets/img/logo.svg" alt="logo" class="logo"></a>
+                <a href="#"><img src="main-file/assets/img/logo.svg" alt="logo" class="logo"></a>
                 <button type="button" class="jo-sidebar-close-btn"><i class="flaticon-add-plus-button"></i></button>
             </div>
 
@@ -57,23 +48,27 @@
 
     <!-- HEADER SECTION START -->
     <header class="jo-header jo-inner-header">
-        <a href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+        <a href="index.html"><img src="main-file/assets/img/logo.svg" alt="logo"></a>
         <div class="jo-header-right">
             <div class="jo-header-nav">
                 <div class="to-go-to-sidebar-in-mobile">
-                    <nav>
-                        <a href="index.html">Home</a>
+                   <nav>
+                     <a href="index.html">Home</a>
                         <a href="about.html">About Me</a>
-                        <!-- <div class="has-sub-menu relative">
-                            <a role="button">Streaming Videos</a>
+                        <!-- <a href="service.html">Services</a> -->
+                        <a href="products.html">Products</a>
+                        <div class="has-sub-menu relative">
+                            <a role="button">Services</a>
 
                             <ul class="jo-header-submenu">
-                                <li><a href="videos-1.html">Streaming Videos 1</a></li>
-                                <li><a href="videos-2.html">Streaming Videos 2</a></li>
-                                <li><a href="videos-3.html">Streaming Videos 3</a></li>
-                                <li><a href="video-details.html">Streaming Video Details</a></li>
+                                <li><a href="service1.html">Local Reviews</a></li>
+                                <li><a href="service2.html">UGC Lifestyle Content</a></li>
+                                <li><a href="service3.html">Honest reviews</a></li>
+                                <li><a href="service4.html">Social Media Management</a></li>
+                                 <li><a href="service5.html">Website&App Development</a></li>
                             </ul>
-                        </div> -->
+                        </div>
+
                         <!-- <div class="has-sub-menu relative">
                             <a role="button">Pages</a>
 
@@ -122,10 +117,10 @@
                 </ul>
 
                 <div class="jo-circle-box">
-                    <span class="circle-1"><img src="assets/img/social-icon-1.png" alt="Social Media Icon"></span>
-                    <span class="circle-2"><img src="assets/img/social-icon-2.png" alt="Social Media Icon"></span>
-                    <span class="circle-3"><img src="assets/img/social-icon-3.png" alt="Social Media Icon"></span>
-                    <span class="circle-4"><img src="assets/img/social-icon-4.png" alt="Social Media Icon"></span>
+                    <span class="circle-1"><img src="main-file/assets/img/social-icon-1.png" alt="Social Media Icon"></span>
+                    <span class="circle-2"><img src="main-file/assets/img/social-icon-2.png" alt="Social Media Icon"></span>
+                    <span class="circle-3"><img src="main-file/assets/img/social-icon-3.png" alt="Social Media Icon"></span>
+                    <span class="circle-4"><img src="main-file/assets/img/social-icon-4.png" alt="Social Media Icon"></span>
                 </div>
             </div>
         </section>
@@ -135,204 +130,153 @@
         <!-- SERVICE SECTION START -->
         <section class="jo-inner-services">
             <div class="jo-container">
-                <h2 class="jo-section-title text-center">Live Reviews &amp; Behind-the-Scenes Content</h2>
-                <p class="jo-service-descr text-center mb-4">I provide live reviews, behind-the-scenes lifestyle content, interviews, and go-live sessions for your service-based business. Perfect for showing your process, connecting with clients, and building credibility.</p>
-
-                <!-- Service Tabs Navigation -->
-                <div class="jo-service-tabs mb-4">
-                    <ul class="nav nav-tabs justify-content-center" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="service-1-tab" data-bs-toggle="tab" data-bs-target="#service-1" type="button" role="tab">Service 1</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="service-2-tab" data-bs-toggle="tab" data-bs-target="#service-2" type="button" role="tab">Service 2</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="service-3-tab" data-bs-toggle="tab" data-bs-target="#service-3" type="button" role="tab">Service 3</button>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Service Tab Content -->
-                <div class="tab-content">
-                    <!-- Service 1 Tab -->
-                    <div class="tab-pane fade show active" id="service-1" role="tabpanel">
-                        <!-- Pricing by Location -->
-                        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <!-- Yonkers -->
+                <div class="row g-4 row-cols-2 row-cols-lg-3">
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/jo-article-1.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">Yonkers, NY — $100</h4>
-                                <p class="jo-service-descr mb-3">Includes one live review or behind-the-scenes session and lifestyle content.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
+
+                                <h4 class="jo-article__title"><a href="service-details.html">High-Quality Product Photography</a></h4>
+
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
+
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mount Vernon -->
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/jo-article-2.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">Mount Vernon, NY — $120</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and short interview clips.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
+
+                                <h4 class="jo-article__title"><a href="service-details.html">Stunning Visuals for Your Products</a></h4>
+
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
+
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- New Rochelle -->
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/jo-article-3.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">New Rochelle, NY — $150</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and lifestyle coverage of your business.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
+
+                                <h4 class="jo-article__title"><a href="service-details.html">Dance Your Way to Brand Awareness</a></h4>
+
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
+
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- White Plains -->
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/service-1.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">White Plains, NY — $175</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and short interview clips.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
+
+                                <h4 class="jo-article__title"><a href="service-details.html">Co-create Engaging Video Content</a></h4>
+
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
+
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- The Bronx -->
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/service-2.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">The Bronx, NY — $100</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and short interview clips.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
+
+                                <h4 class="jo-article__title"><a href="service-details.html">Trending Challenges with Your Brand</a></h4>
+
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
+
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Harlem -->
+                    <!-- single service -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service">
+                            <div class="jo-article__img">
+                                <img src="main-file/assets/img/service-3.jpg" alt="Service Image">
+                            </div>
+
                             <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
+                                <div class="jo-article__infos flex gap-x-[30px] mb-[16px]">
+                                    <!-- single info -->
                                     <div class="jo-article__info">
                                         <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
+                                        <span class="text font-normal text-[14px] text-etGray">Video Content</span>
                                     </div>
                                 </div>
-                                <h4 class="jo-article__title">Harlem, NY — $100</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and short interview clips.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Brooklyn -->
-                    <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
-                            <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
-                                    <div class="jo-article__info">
-                                        <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
-                                    </div>
-                                </div>
-                                <h4 class="jo-article__title">Brooklyn, NY — $250</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and lifestyle coverage for social media.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
-                            </div>
-                        </div>
-                    </div>
+                                <h4 class="jo-article__title"><a href="service-details.html">Feature Your Product in My Videos</a></h4>
 
-                    <!-- Queens -->
-                    <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
-                            <div class="jo-article__txt">
-                                <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
-                                    <div class="jo-article__info">
-                                        <span class="icon"><i class="flaticon-price-tag"></i></span>
-                                        <span class="text font-normal text-[14px] text-etGray">Pricing by Location</span>
-                                    </div>
-                                </div>
-                                <h4 class="jo-article__title">Queens, NY — $250</h4>
-                                <p class="jo-service-descr mb-3">Includes live review, behind-the-scenes content, and lifestyle coverage for social media.</p>
-                                <a href="#" class="jo-btn">BOOK MY SESSION</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <p class="jo-service-descr">the perfect set of skills for your next project Work with the world's best freelancing talent</p>
 
-                <!-- Other towns note -->
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
-                            <div class="jo-article__txt">
-                                <p class="jo-service-descr mb-2">Other towns – Please email <a href="mailto:tjonesnetwork@outlook.com">tjonesnetwork@outlook.com</a> for pricing and availability.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- What's Included icon grid -->
-                <div class="mt-4">
-                    <h3 class="jo-section-title text-center">What’s Included</h3>
-                    <div class="row g-4 row-cols-2 row-cols-md-4 mt-1">
-                        <div class="col">
-                            <div class="jo-inner-feature rounded-3 p-3 text-center">
-                                <span class="icon d-inline-block mb-2"><i class="flaticon-social-media"></i></span>
-                                <h6 class="m-0">Live review showcasing your service</h6>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="jo-inner-feature rounded-3 p-3 text-center">
-                                <span class="icon d-inline-block mb-2"><i class="flaticon-social-media"></i></span>
-                                <h6 class="m-0">Behind-the-scenes lifestyle content</h6>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="jo-inner-feature rounded-3 p-3 text-center">
-                                <span class="icon d-inline-block mb-2"><i class="flaticon-social-media"></i></span>
-                                <h6 class="m-0">Short interview clips</h6>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="jo-inner-feature rounded-3 p-3 text-center">
-                                <span class="icon d-inline-block mb-2"><i class="flaticon-social-media"></i></span>
-                                <h6 class="m-0">Mentions and tags to drive engagement</h6>
+                                <a href="service-details.html" class="jo-btn"><span class="icon"><i class="flaticon-add-plus-button"></i></span> View Details</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +286,35 @@
         <!-- SERVICE SECTION END -->
 
 
-       
+        <!-- FEATURES SECTION START -->
+        <div class="jo-inner-features">
+            <div class="jo-container">
+                <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                    <!-- single feature -->
+                    <div class="jo-inner-feature">
+                        <div class="icon"><i class="flaticon-promotion"></i></div>
+                        <h2 class="title">Product Promotions</h2>
+                    </div>
+                    <!-- single feature -->
+                    <div class="jo-inner-feature">
+                        <div class="icon"><i class="flaticon-influencer"></i></div>
+                        <h2 class="title">Influencer Discovery</h2>
+                    </div>
+                    <!-- single feature -->
+                    <div class="jo-inner-feature">
+                        <div class="icon"><i class="flaticon-content"></i></div>
+                        <h2 class="title">Content Creation</h2>
+                    </div>
+                    <!-- single feature -->
+                    <div class="jo-inner-feature">
+                        <div class="icon"><i class="flaticon-campaign"></i></div>
+                        <h2 class="title">Campaign Management</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FEATURES SECTION END -->
+
 
         <!-- FAQ SECTION START -->
         <section class="jo-inner-faq">
@@ -354,13 +326,13 @@
                         <div class="sa-single-accordion-item__header">
                             <div class="left">
                                 <h5 class="order-num">01</h5>
-                                <h5 class="sa-single-accordion-item__title">Who is this for?</h5>
+                                <h5 class="sa-single-accordion-item__title">What is an OTT platform?</h5>
                             </div>
                             <span class="icon"><i class="flaticon-right-arrow"></i></span>
                         </div>
 
                         <div class="sa-single-accordion-item__body">
-                            <p>Service-based businesses in the NY area looking to promote their services with live and lifestyle content.</p>
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
                         </div>
                     </div>
 
@@ -369,13 +341,13 @@
                         <div class="sa-single-accordion-item__header">
                             <div class="left">
                                 <h5 class="order-num">02</h5>
-                                <h5 class="sa-single-accordion-item__title">How long is each session?</h5>
+                                <h5 class="sa-single-accordion-item__title">How do I sign up for an account?</h5>
                             </div>
                             <span class="icon"><i class="flaticon-right-arrow"></i></span>
                         </div>
 
                         <div class="sa-single-accordion-item__body">
-                            <p>Sessions typically last 30–60 minutes depending on your content needs.</p>
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
                         </div>
                     </div>
 
@@ -384,13 +356,13 @@
                         <div class="sa-single-accordion-item__header">
                             <div class="left">
                                 <h5 class="order-num">03</h5>
-                                <h5 class="sa-single-accordion-item__title">Can you go live on my page?</h5>
+                                <h5 class="sa-single-accordion-item__title">What devices can I use to watch content?</h5>
                             </div>
                             <span class="icon"><i class="flaticon-right-arrow"></i></span>
                         </div>
 
                         <div class="sa-single-accordion-item__body">
-                            <p>Yes, I can coordinate live sessions on your page or my page depending on the package.</p>
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
                         </div>
                     </div>
 
@@ -399,13 +371,13 @@
                         <div class="sa-single-accordion-item__header">
                             <div class="left">
                                 <h5 class="order-num">04</h5>
-                                <h5 class="sa-single-accordion-item__title">How long does it take to deliver content?</h5>
+                                <h5 class="sa-single-accordion-item__title">How many devices can I stream on simultaneously?</h5>
                             </div>
                             <span class="icon"><i class="flaticon-right-arrow"></i></span>
                         </div>
 
                         <div class="sa-single-accordion-item__body">
-                            <p>Edited clips and behind-the-scenes content will be delivered within 3–5 business days.</p>
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
                         </div>
                     </div>
 
@@ -414,13 +386,28 @@
                         <div class="sa-single-accordion-item__header">
                             <div class="left">
                                 <h5 class="order-num">05</h5>
-                                <h5 class="sa-single-accordion-item__title">Are results guaranteed?</h5>
+                                <h5 class="sa-single-accordion-item__title">How do I download content for offline viewing?</h5>
                             </div>
                             <span class="icon"><i class="flaticon-right-arrow"></i></span>
                         </div>
 
                         <div class="sa-single-accordion-item__body">
-                            <p>No. Live and behind-the-scenes content increases visibility and engagement but results depend on your audience and service.</p>
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
+                        </div>
+                    </div>
+
+                    <!-- single question -->
+                    <div class="sa-single-accordion-item">
+                        <div class="sa-single-accordion-item__header">
+                            <div class="left">
+                                <h5 class="order-num">06</h5>
+                                <h5 class="sa-single-accordion-item__title">What are the subscription plans available?</h5>
+                            </div>
+                            <span class="icon"><i class="flaticon-right-arrow"></i></span>
+                        </div>
+
+                        <div class="sa-single-accordion-item__body">
+                            <p>Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio. Mauris et mollis quam. Nullam fringilla erat id ante commodo sodales. In maximus ultrices euismod. Vivamus porta justo ex.</p>
                         </div>
                     </div>
                 </div>
@@ -514,7 +501,18 @@
     <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
     <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
     <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
+        <script src="main-file/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="main-file/assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="main-file/assets/vendor/splide/splide.min.js"></script>
+        <script src="main-file/assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+        <script src="main-file/assets/vendor/slim-select/slimselect.min.js"></script>
+        <script src="main-file/assets/vendor/plyr/plyr.polyfilled.js"></script>
+        <script src="main-file/assets/vendor/no-ui-slider/nouislider.min.js"></script>
+        <script src="main-file/assets/vendor/fs-lightbox/fslightbox.js"></script>
 
+        <!-- custom js -->
+        <script src="main-file/assets/js/main.js"></script>
+        <script src="main-file/assets/js/accordion.js"></script>
     <!-- custom js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/accordion.js"></script>
