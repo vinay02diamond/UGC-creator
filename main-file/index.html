@@ -197,7 +197,7 @@
                             <div class="icon"><img src="assets/img/social-icon-4.png" alt="Social Media Icon"></div>
                             <div class="txt">
                                 <h5>Threads</h5>
-                                <span>15K Sbscribers</span>
+                                <span>15K Subscribers</span>
                             </div>
                             <a href="https://www.threads.com/@reviewsbytianni" class="jo-btn">Follow Me</a>
                         </div>
@@ -205,12 +205,12 @@
                     <!-- single social -->
                     <div class="col-md-3 col-6 col-xxs-12">
                         <div class="jo-social-link">
-                            <div class="icon"><img src="assets/img/social-icon-4.png" alt="Social Media Icon"></div>
+                            <div class="icon"><img src="assets/img/Social-icon-5.png" alt="Social Media Icon"></div>
                             <div class="txt">
-                                <h5>Threads</h5>
-                                <span>15K Sbscribers</span>
+                                <h5>Discord</h5>
+                                <span>Join my Channelspan>
                             </div>
-                            <a href="https://www.threads.com/@reviewsbytianni" class="jo-btn">Follow Me</a>
+                            <a href="https://discord.com/invite/D7WMWundyP" class="jo-btn">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -932,32 +932,26 @@
                                 <div class="jo-contact-form-wrapper">
                                     <img src="assets/img/contact-form-icon.svg" alt="icon" class="icon">
                                     <h2 class="jo-section-title">For Small Business owners less than 500 Followers only</h2>
-                                    <p>Please only apply if you follower count is less than 500 in instagram
+                                    <p>Please only apply if your follower count is less than 500 on Instagram.</p>
                                     <form id="contact_form" class="jo-contact-form">
                                         <div>
-                                            <label for="user_name">Your Business Name</label>
-                                            <input type="text" name="user_name" id="user_name" placeholder="Your  Business Name"
-                                                required>
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" placeholder="Your Business Name" required>
                                         </div>
                                         <div>
-                                            <label for="user_instagram">Your Instagram Handle</label>
-                                            <input type="text" name="user_instagram" id="user_instagram" placeholder="@reviewsbytianni"
-                                                required>
+                                            <label for="instagram_id">Instagram ID</label>
+                                            <input type="text" name="instagram" id="instagram_id" placeholder="Your instagram ID" required>
                                         </div>
-
                                         <div>
-                                            <label for="user_email">Your Email Address</label>
-                                            <input type="email" name="user_email" id="user_email"
-                                                placeholder="Your Email" required>
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" placeholder="Your Email" required>
                                         </div>
-
                                         <div>
-                                            <label for="message">Any message you want to convey me</label>
-                                            <textarea name="message" id="message" placeholder="Write Message..."
-                                                required></textarea>
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" placeholder="Let me know more about your business"></textarea>
                                         </div>
-
                                         <button type="submit" class="jo-btn">Apply</button>
+                                        <p id="responseMessage" class="status" role="status" aria-live="polite" style="margin-top:10px"></p>
                                     </form>
                                 </div>
                             </div>
@@ -1229,32 +1223,88 @@
     <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
     <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
 
-    <!-- Email JS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+    <!-- Email JS (v3 CDN for broader compatibility) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        emailjs.init("RUeFxw98_wtG76XVi"); // Email.js Public Key
+        // Initialize EmailJS once the SDK is available
+        (function init() {
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS SDK not loaded');
+                return; // Avoid attaching handlers without SDK
+            }
 
-        document.getElementById("contact_form").addEventListener("submit", function(event) {
-            event.preventDefault();
+            emailjs.init("RUeFxw98_wtG76XVi");
 
-            let params = {
-                user_name: document.getElementById("user_name").value,
-                user_instagram: document.getElementById("user_instagram").value,
-                user_email: document.getElementById("user_email").value,
-                message: document.getElementById("message").value
-            };
+            const form = document.getElementById("contact_form");
+            const statusEl = document.getElementById("responseMessage");
+            const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
-            emailjs.send("service_6m95dul", "template_379201c", params)     
-                .then(response => {
-                    alert("Message sent successfully!");
-                    document.getElementById("contact_form").reset();
-                })
-                .catch(error => {
-                    alert("Failed to send message. Please try again.");
-                    console.error("EmailJS Error:", error);
-                });
-        });
+            if (!form) {
+                console.error('Contact form element not found');
+                return;
+            }
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                console.log("Form Submitted!");
+
+                const params = {
+                    name: document.getElementById("name").value,
+                    instagram: document.getElementById("instagram_id").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value
+                };
+
+                console.log("Sending:", params);
+                if (statusEl) {
+                    statusEl.textContent = "Sending...";
+                    statusEl.classList.remove('success','error');
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.dataset.originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending…';
+                }
+
+                emailjs.send("service_6m95dul", "template_379201c", params)
+                    .then(function(response) {
+                        console.log("SUCCESS:", response);
+                        if (statusEl) {
+                            statusEl.textContent = "Message sent successfully!";
+                            statusEl.classList.add('success');
+                            statusEl.classList.remove('error');
+                            statusEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+                        }
+                        form.reset();
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = submitBtn.dataset.originalText || 'Send';
+                        }
+                    })
+                    .catch(function(error) {
+                        console.error("EmailJS Error:", error);
+                        const msg = (error && (error.text || error.message)) ? String(error.text || error.message) : "Please try again.";
+                        if (statusEl) {
+                            statusEl.textContent = "Failed to send message. " + msg;
+                            statusEl.classList.add('error');
+                            statusEl.classList.remove('success');
+                            statusEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+                        }
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = submitBtn.dataset.originalText || 'Send';
+                        }
+                    });
+            });
+        })();
     </script>
+
+    <!-- Inline styles for status feedback -->
+    <style>
+        .status { font-size: 14px; }
+        .status.success { color: #1e7e34; }
+        .status.error { color: #dc3545; }
+    </style>
 
     <!-- custom js -->
     <script src="assets/js/accordion.js"></script>
