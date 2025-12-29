@@ -4755,3 +4755,84 @@ input {
   font-size: 22px;
   padding-top: 3px;
 }/*# sourceMappingURL=style.css.map */
+
+.marquee-section {
+  overflow: hidden;
+  background: #fff; /* optional */
+  padding: 20px 0;
+}
+
+.marquee-row {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 40px; /* gap between rows */
+}
+
+.marquee-track {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-right .marquee-track {
+  animation: scroll-right 20s linear infinite;
+}
+
+.marquee-track img {
+  width: 200px;   /* adjust size */
+  margin: 0 10px; /* spacing between images */
+}
+
+/* Animations */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* Fade effect at edges */
+.marquee-row::before,
+.marquee-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px; /* fade width */
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.marquee-row::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.marquee-row::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+
+/* Default desktop duration */
+.marquee-right .marquee-track { animation-duration: 30s; }
+.marquee-left  .marquee-track { animation-duration: 30s; }
+
+/* Tablet: slower */
+@media (max-width: 992px) {
+  .marquee-right .marquee-track,
+  .marquee-left  .marquee-track {
+    animation-duration: 45s;
+  }
+}
+
+/* Mobile: slowest */
+@media (max-width: 576px) {
+  .marquee-right .marquee-track,
+  .marquee-left  .marquee-track {
+    animation-duration: 30s;
+  }
+}
