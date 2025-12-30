@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="assets/font/flaticon_jio_-_influencer.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet" href="assets/vendor/plyr/plyr.css">
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet" href="assets/vendor/no-ui-slider/nouislider.min.css">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style2.css"> -->
+    <style>
+        /* Fix button gradient to show by default */
+        .jo-btn::before {
+            opacity: 1 !important;
+        }
+        .jo-btn:hover::before {
+            opacity: 0.8 !important;
+        }
+
+        /* Coming Soon Section */
+        @keyframes levitate {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .coming-soon-container {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .coming-soon-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 
+                0 0 30px rgba(102, 126, 234, 0.6),
+                0 0 60px rgba(118, 75, 162, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: levitate 3s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .coming-soon-box h2 {
+            color: #fff;
+            font-size: 32px;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .coming-soon-box p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 18px;
+            margin: 15px 0 0 0;
+            font-weight: 500;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Tianni's Recommendation Section */
+        .tianni-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 40px 0;
+            border-radius: 15px;
+        }
+
+        .tianni-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            height: 250px;
+            width: 100%;
+            object-fit: contain; /* ensure full image is visible */
+            background: #fff;
+            padding: 10px;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .code-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .discount-code {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid white;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copy-btn:hover {
+            background: white;
+            color: #667eea;
+            transform: scale(1.1);
+        }
+
+        .visit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .visit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(245, 87, 108, 0.4);
+        }
+
+        .copy-feedback {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            animation: slideIn 0.3s ease, slideOut 0.3s ease 2.7s forwards;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
+        /* Featured Products heading */
+        .jo-section-title.featured-title {
+            display: inline-block;
+            font-size: clamp(26px, 3vw, 34px);
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 10px;
+            text-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+        }
+        .jo-section-title.featured-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #667eea, #f093fb, #f5576c);
+            box-shadow: 0 6px 16px rgba(245, 87, 108, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="jo-sidebar">
+        <div>
+            <!-- heading -->
+            <div class="jo-sidebar__heading d-flex justify-content-between align-items-center">
+                <a href="#"><img src="assets/img/logo.svg" alt="logo" class="logo"></a>
+                <button type="button" class="jo-sidebar-close-btn"><i class="flaticon-add-plus-button"></i></button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="jo-header-nav-in-mobile"></div>
+        </div>
+
+        <div>
+            <a href="about.html" class="jo-btn"><i class="flaticon-add-plus-button"></i>Follow Me</a>
+            <!-- socials -->
+            <div class="tt-footer-top__socials jo-footer-top__socials jo-sidebar-socials justify-content-start justify-content-sm-end">
+                <a href="#"><i class="flaticon-facebook-1"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-social-media"></i></a>
+                <a href="#"><i class="flaticon-threads-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER SECTION START -->
+    <header class="jo-header jo-inner-header">
+        <a href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
+        <div class="jo-header-right">
+            <div class="jo-header-nav">
+                <div class="to-go-to-sidebar-in-mobile">
+                     <nav>
+                     <a href="index.html">Home</a>
+                        <a href="about.html">About Me</a>
+                        <!-- <a href="service.html">Services</a> -->
+                        <a href="products.html">Products</a>
+                        <div class="has-sub-menu relative">
+                            <a role="button">Services</a>
+
+                            <ul class="jo-header-submenu">
+                                <li><a href="service1.html">Live Local Reviews</a></li>
+                                <li><a href="service2.html">UGC Lifestyle Content</a></li>
+                                <li><a href="service3.html">Honest reviews</a></li>
+                                <li><a href="service4.html">Story Promotion Package</a></li>
+                                <li><a href="service5.html">Social Media Managemnt</a></li>
+                                <li><a href="service6.html">Website design and development</a></li>
+                            </ul>
+                        </div>
+                            <!-- <ul class="jo-header-submenu">
+                                <li><a href="video-shop.html">Video Shop</a></li>
+                                <li><a href="video-shop-details.html">Video Shop Details</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="register.html">Sign Up</a></li>
+                                <li><a href="login.html">Sign in</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                            </ul> -->
+                        <!-- </div> -->
+                        <!-- <div class="has-sub-menu relative">
+                            <a role="button">Blog</a>
+
+                            <ul class="jo-header-submenu">
+                                <li><a href="blog.html">Blogs</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </div> -->
+                        <a href="contact.html">Contact</a>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="about.html" class="jo-btn"><i class="flaticon-add-plus-button"></i>Follow Me</a>
+                <button class="jo-header-sidebar-open-btn jo-btn px-3 d-inline-block d-lg-none"><i class="flaticon-menu"></i></button>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+
+    <main>
+        <!-- BREADCRUMB SECTION START -->
+        <section class="jo-breadcrumb">
+            <div class="container">
+                <h1 class="jo-page-title jo-section-title">Promos</h1>
+                <ul class="jo-breadcrumb-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><span>/</span></li>
+                    <li class="current-page">Support us</li>
+                </ul>
+
+                <div class="jo-circle-box">
+                    <span class="circle-1"><img src="assets/img/social-icon-1.png" alt="Social Media Icon"></span>
+                    <span class="circle-2"><img src="assets/img/social-icon-2.png" alt="Social Media Icon"></span>
+                    <span class="circle-3"><img src="assets/img/social-icon-3.png" alt="Social Media Icon"></span>
+                    <span class="circle-4"><img src="assets/img/social-icon-4.png" alt="Social Media Icon"></span>
+                </div>
+            </div>
+        </section>
+        <Section>
+            <!-- Coming Soon Section -->
+<div class="coming-soon-container">
+  <div class="coming-soon-box">
+    <h2>✨ Coming Soon ✨</h2>
+    <p>Black Owned Business</p>
+    <div class="coming-soon-badge">March 2026</div>
+  </div>
+</div>
+        </Section>
+        <section>
+            <!-- Tianni's Recommendation Section -->
+<div class="tianni-section">
+  <h1 class="tianni-title">💎 Tianni's Recommendations 💎</h1>
+  
+  <div class="products-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="assets/img/1.png" alt="Product 1" class="product-image">
+      <div class="product-info">
+        <h3 style="color: #2c3e50; margin-top: 0;">Anybodyessentials</h3>
+        <div class="code-box">
+          <span class="discount-code">TIANNI30</span>
+          <button class="copy-btn" onclick="copyCode('TIANN25')" title="Copy Code">📋</button>
+        </div>
+        <a href="https://anybodyessentials.com/" target="_blank" class="visit-btn">Visit Product</a>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="assets/img/2.png" alt="Product 2" class="product-image">
+      <div class="product-info">
+        <h3 style="color: #2c3e50; margin-top: 0;">Underneath-Themakeup</h3>
+        <div class="code-box">
+          <span class="discount-code">TIANNI444</span>
+          <button class="copy-btn" onclick="copyCode('TIANNI444')" title="Copy Code">📋</button>
+        </div>
+        <a href="https://underneath-themakeup.com/" target="_blank" class="visit-btn">Visit Product</a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="assets/img/3.png" alt="Product 3" class="product-image">
+      <div class="product-info">
+        <h3 style="color: #2c3e50; margin-top: 0;">Velezbeautii</h3>
+        <div class="code-box">
+          <span class="discount-code">TIANNI30</span>
+          <button class="copy-btn" onclick="copyCode('TIANNI30')" title="Copy Code">📋</button>
+        </div>
+        <a href="https://www.velezbeautii.com/" target="_blank" class="visit-btn">Visit Product</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function copyCode(code) {
+    navigator.clipboard.writeText(code).then(() => {
+      // Show feedback message
+      const feedback = document.createElement('div');
+      feedback.className = 'copy-feedback';
+      feedback.textContent = '✓ Code copied to clipboard!';
+      document.body.appendChild(feedback);
+      
+      setTimeout(() => {
+        feedback.remove();
+      }, 3000);
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+      alert('Code: ' + code);
+    });
+  }
+</script>
+        </section>
+        <!-- BREADCRUMB SECTION END -->
+         <section class="marquee-section">
+    <div class="jo-container">
+    <h2 class="jo-section-title featured-title text-center">FEATURED PRODUCTS</h2>
+  </div>
+  <div class="marquee-row marquee-right" data-speed="42">
+    <div class="marquee-track">
+      <img src="assets/img/pi1.jpg" alt="">
+      <img src="assets/img/pi2.jpg" alt="">
+      <img src="assets/img/pi3.jpg" alt="">
+      <img src="assets/img/pi4.jpg" alt="">
+      <img src="assets/img/pi5.jpg" alt="">
+      <img src="assets/img/pi6.jpg" alt="">
+      <img src="assets/img/pi7.jpg" alt="">
+      <img src="assets/img/pi8.jpg" alt="">
+      <img src="assets/img/pi9.jpg" alt="">
+      <img src="assets/img/pi10.jpg" alt="">
+         <!-- Duplicate images for smooth loop -->
+        <img src="assets/img/pi1.jpg" alt="">
+      <img src="assets/img/pi2.jpg" alt="">
+      <img src="assets/img/pi3.jpg" alt="">
+      <img src="assets/img/pi4.jpg" alt="">
+      <img src="assets/img/pi5.jpg" alt="">
+      <img src="assets/img/pi6.jpg" alt="">
+      <img src="assets/img/pi7.jpg" alt="">
+      <img src="assets/img/pi8.jpg" alt="">
+      <img src="assets/img/pi9.jpg" alt="">
+      <img src="assets/img/pi10.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="marquee-row marquee-left" data-speed="38">
+    <div class="marquee-track">
+      <img src="assets/img/pi11.jpg" alt="">
+      <img src="assets/img/pi12.jpg" alt="">
+      <img src="assets/img/pi13.jpg" alt="">
+      <img src="assets/img/pi14.jpg" alt="">
+      <img src="assets/img/pi15.jpg" alt="">
+      <img src="assets/img/pi16.jpg" alt="">
+      <img src="assets/img/pi17.jpg" alt="">
+      <img src="assets/img/pi18.jpg" alt="">
+      <img src="assets/img/pi19.jpg" alt="">
+      <img src="assets/img/pi20.jpg" alt="">
+            <!-- Duplicate images for smooth loop -->
+            <img src="assets/img/pi11.jpg" alt="">
+      <img src="assets/img/pi12.jpg" alt="">
+      <img src="assets/img/pi13.jpg" alt="">
+      <img src="assets/img/pi14.jpg" alt="">
+      <img src="assets/img/pi15.jpg" alt="">
+      <img src="assets/img/pi16.jpg" alt="">
+      <img src="assets/img/pi17.jpg" alt="">
+      <img src="assets/img/pi18.jpg" alt="">
+      <img src="assets/img/pi19.jpg" alt="">
+      <img src="assets/img/pi20.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+       
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="jo-footer">
+        <div class="jo-container">
+            <!-- footer top -->
+            <div class="jo-footer-top">
+                <div class="row gx-4 gy-sm-5 gy-4 align-items-center">
+                    <div class="col-lg-3 col-6 col-xxs-12">
+                        <a href="index.html"><img src="assets/img/logo-white.svg" alt="logo" class="logo"></a>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <!-- nwsltr -->
+                        <form action="#" class="jo-footer-top__nwsltr">
+                            <input type="email" name="jo-nwsltr-email" id="jo-nwsltr-email" placeholder="Email Address">
+                            <button class="jo-btn" type="submit">Get Newsletter</button>
+                        </form>
+                    </div>
+                    <!-- socials -->
+                    <div class="col-lg-3 col-6 col-xxs-12 order-lg-2 order-1">
+                        <div class="tt-footer-top__socials jo-footer-top__socials justify-content-start justify-content-sm-end">
+                            <a href="#"><i class="flaticon-facebook-1"></i></a>
+                            <a href="#"><i class="flaticon-twitter"></i></a>
+                            <a href="#"><i class="flaticon-social-media"></i></a>
+                            <a href="#"><i class="flaticon-youtube-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer middle -->
+            <div class="jo-footer-middle">
+                <div class="row g-4">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-contact">
+                            <h5 class="jo-footer-widget__title">Get in Touch</h5>
+                            <a href="mailto:contact.me@gmail.com">contact.me@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-links">
+                            <h5 class="jo-footer-widget__title">Browse Categories</h5>
+                            <div class="links">
+                                <a href="#">Music</a>
+                                <a href="#">Sports</a>
+                                <a href="#">Gaming</a>
+                                <a href="#">Fashion</a>
+                                <a href="#">Art</a>
+                                <a href="#">Photography</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-gallery">
+                            <h5 class="jo-footer-widget__title">Instagram feed</h5>
+                             <div class="imgs flex-wrap">
+                                <img src="assets/img/footer-img-1.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-2.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-3.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-4.png" alt="Footer Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer bottom -->
+            <div class="tt-footer-bottom text-center">
+               <p class="mb-0">Copyright ©2025 Developed by&nbsp;Modern360Technology</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+
+    <!-- libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
+    <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
+    <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
+    
+        <!-- custom js -->
+        <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/splide/splide.min.js"></script>
+        <script src="assets/vendor/splide-extension-auto-scroll.min.js"></script>
+        <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+        <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
+        <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
+        <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
+
+        <!-- custom js -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/accordion.js"></script>
+</body>
+</html>
