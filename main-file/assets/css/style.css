@@ -3503,4 +3503,20 @@ input {
     from { transform: translateX(-50%); }
     to   { transform: translateX(0); }
 }
+.footer-credit {
+    color: #ffffff !important;
+    padding: 0;
+    overflow: visible;
+    position: static;
+}
+
+.mod360 {
+    color: #0066ff !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mod360:hover {
+    color: #0052cc !important;
+}
 
