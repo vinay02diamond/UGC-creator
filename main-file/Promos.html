@@ -563,7 +563,7 @@
 
             <!-- footer bottom -->
             <div class="tt-footer-bottom text-center">
-               <p class="mb-0">Copyright ©2025 Developed by&nbsp;Modern360Technology</p>
+                <p class="mb-0">Copyright ©2026 Developed by&nbsp;Modern360Technology</p>
             </div>
         </div>
     </footer>
@@ -593,5 +593,11 @@
         <!-- custom js -->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/accordion.js"></script>
+        <script>
+      document.querySelectorAll('.marquee-row').forEach(row => {
+        const speed = row.getAttribute('data-speed');
+        if (speed) row.style.setProperty('--speed', `${speed}s`);
+      });
+    </script>
 </body>
 </html>
