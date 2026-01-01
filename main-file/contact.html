@@ -18,6 +18,44 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style2.css"> -->
+    <style>
+        /* Contact Cards Hover Effects */
+        .contact-card {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #db2777, #f5576c);
+            z-index: 1;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(219, 39, 119, 0.2);
+            border-color: #db2777;
+        }
+
+        .contact-card .mb-3 {
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover .mb-3 {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -136,7 +174,7 @@
             <div class="jo-container">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="p-4 text-center rounded-3 border border-danger-subtle">
+                        <div class="contact-card">
                             <div class="mb-3">
                                 <img src="assets/img/contact-form-icon.svg" alt="Email Icon" style="width:48px;height:48px;">
                             </div>
@@ -146,7 +184,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="p-4 text-center rounded-3 border border-danger-subtle">
+                        <div class="contact-card">
                             <div class="mb-3">
                                 <img src="assets/img/contact-form-icon.svg" alt="Phone Icon" style="width:48px;height:48px;">
                             </div>

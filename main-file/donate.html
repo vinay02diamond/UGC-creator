@@ -26,6 +26,154 @@
         .jo-btn:hover::before {
             opacity: 0.8 !important;
         }
+
+        /* Support Benefits Cards */
+        .support-card {
+            padding: 30px;
+            background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+            border-radius: 15px;
+            height: 100%;
+            border-left: 5px solid #db2777;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(219, 39, 119, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .support-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(219, 39, 119, 0.15);
+            border-left-color: #f5576c;
+        }
+
+        .support-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-card h5 {
+            color: #db2777;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .support-card i {
+            font-size: 28px;
+            color: #f5576c;
+        }
+
+        .support-card p {
+            margin: 0;
+            line-height: 1.7;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Donation Cards */
+        .donation-card {
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .donation-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #db2777, #f5576c);
+            z-index: 1;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(219, 39, 119, 0.2);
+            border-color: #db2777;
+        }
+
+        .donation-card-title {
+            color: #db2777;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .donation-card-subtitle {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .donation-card .jo-btn {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: auto;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #db2777, #f5576c);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
     </style>
 </head>
 
@@ -140,102 +288,112 @@
                 <div class="row g-4">
                     <div class="col-lg-12">
                         <div class="jo-service-details-content">
-                            <h2 class="jo-section-title text-center">Join My Small Business Community</h2>
-                            <p class="text-center" style="max-width: 900px; margin: 0 auto 50px; font-size: 18px; line-height: 1.8;">My mission is to uplift small business owners who are just starting and help them grow. I travel directly to small businesses to showcase their products, provide equipment, host giveaways, and organize meet and greets. I want every small business owner to feel supported, seen, and connected to a community that cares.</p>
+                            <h2 class="section-title">Join My Small Business Community</h2>
+                            <p class="section-subtitle" style="max-width: 900px; margin: 50px auto 0;">My mission is to uplift small business owners who are just starting and help them grow. I travel directly to small businesses to showcase their products, provide equipment, host giveaways, and organize meet and greets. I want every small business owner to feel supported, seen, and connected to a community that cares.</p>
 
-                            <h3 class="text-center mt-5 mb-4" style="font-size: 32px; font-weight: 700;">How Your Support Helps</h3>
-                            <p class="text-center mb-4" style="font-size: 18px;">When you donate, you help me provide:</p>
-                            
-                            <div class="row g-4 mb-5" style="max-width: 1000px; margin: 0 auto;">
-                                <div class="col-md-6">
-                                    <div style="padding: 25px; background: linear-gradient(135deg, #fff5f7 0%, #fff 100%); border-radius: 15px; height: 100%; border-left: 4px solid var(--jo-primary-color);">
-                                        <h5 style="color: var(--jo-primary-color); font-weight: 700; margin-bottom: 12px; font-size: 20px;">
-                                            <i class="flaticon-video-camera" style="margin-right: 10px;"></i>Content Equipment
-                                        </h5>
-                                        <p style="margin: 0; line-height: 1.7; color: #666;">Lights, tripods, backdrops, and props like flowers and small decorations to make their products shine</p>
+                            <!-- How Your Support Helps -->
+                            <div style="margin-top: 80px;">
+                                <h3 class="section-title">How Your Support Helps</h3>
+                                <p class="section-subtitle" style="max-width: 900px; margin: 50px auto 0;">When you donate, you help me provide:</p>
+                                
+                                <div class="row g-4" style="max-width: 1100px; margin: 50px auto 0;">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="support-card">
+                                            <div class="support-card-content">
+                                                <h5><i class="flaticon-video-camera"></i>Content Equipment</h5>
+                                                <p>Lights, tripods, backdrops, and props like flowers and small decorations to make their products shine</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="support-card">
+                                            <div class="support-card-content">
+                                                <h5><i class="flaticon-gift"></i>Giveaways</h5>
+                                                <p>Items to help small businesses reach new customers and create excitement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="support-card">
+                                            <div class="support-card-content">
+                                                <h5><i class="flaticon-rocket"></i>Startup Assistance</h5>
+                                                <p>Support for inventory, products, or tools small businesses need to get started or grow</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="support-card">
+                                            <div class="support-card-content">
+                                                <h5><i class="flaticon-book"></i>Education and Training</h5>
+                                                <p>Guidance on marketing, content creation, and business growth</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="support-card">
+                                            <div class="support-card-content">
+                                                <h5><i class="flaticon-network"></i>Community Events</h5>
+                                                <p>Meet and greets to connect entrepreneurs, share experiences, and build lasting support networks</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div style="padding: 25px; background: linear-gradient(135deg, #fff5f7 0%, #fff 100%); border-radius: 15px; height: 100%; border-left: 4px solid var(--jo-primary-color);">
-                                        <h5 style="color: var(--jo-primary-color); font-weight: 700; margin-bottom: 12px; font-size: 20px;">
-                                            <i class="flaticon-gift" style="margin-right: 10px;"></i>Giveaways
-                                        </h5>
-                                        <p style="margin: 0; line-height: 1.7; color: #666;">Items to help small businesses reach new customers and create excitement</p>
+                                
+                                <p class="section-subtitle" style="max-width: 900px; margin: 60px auto 0;">Every donation helps me give small business owners the tools, guidance, and opportunities they need to succeed.</p>
+                            </div>
+
+                            <!-- Suggested Support Levels -->
+                            <div style="margin-top: 80px;">
+                                <h3 class="section-title">Suggested Support Levels</h3>
+                                <div class="row g-4" style="max-width: 1200px; margin: 50px auto 0;">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="donation-card">
+                                            <div class="donation-card-title">$10</div>
+                                            <div style="font-size: 14px; color: #db2777; font-weight: 600; margin-bottom: 15px;">Community Member</div>
+                                            <p class="donation-card-subtitle">Helps fund educational resources and small business guides</p>
+                                            <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=10" target="_blank" class="jo-btn">
+                                                Donate $10
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div style="padding: 25px; background: linear-gradient(135deg, #fff5f7 0%, #fff 100%); border-radius: 15px; height: 100%; border-left: 4px solid var(--jo-primary-color);">
-                                        <h5 style="color: var(--jo-primary-color); font-weight: 700; margin-bottom: 12px; font-size: 20px;">
-                                            <i class="flaticon-rocket" style="margin-right: 10px;"></i>Startup Assistance
-                                        </h5>
-                                        <p style="margin: 0; line-height: 1.7; color: #666;">Support for inventory, products, or tools small businesses need to get started or grow</p>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="donation-card">
+                                            <div class="donation-card-title">$25</div>
+                                            <div style="font-size: 14px; color: #db2777; font-weight: 600; margin-bottom: 15px;">Community Ally</div>
+                                            <p class="donation-card-subtitle">Supports essential tools and starter equipment for entrepreneurs</p>
+                                            <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=25" target="_blank" class="jo-btn">
+                                                Donate $25
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div style="padding: 25px; background: linear-gradient(135deg, #fff5f7 0%, #fff 100%); border-radius: 15px; height: 100%; border-left: 4px solid var(--jo-primary-color);">
-                                        <h5 style="color: var(--jo-primary-color); font-weight: 700; margin-bottom: 12px; font-size: 20px;">
-                                            <i class="flaticon-book" style="margin-right: 10px;"></i>Education and Training
-                                        </h5>
-                                        <p style="margin: 0; line-height: 1.7; color: #666;">Guidance on marketing, content creation, and business growth</p>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="donation-card">
+                                            <div class="donation-card-title">$50</div>
+                                            <div style="font-size: 14px; color: #db2777; font-weight: 600; margin-bottom: 15px;">Community Booster</div>
+                                            <p class="donation-card-subtitle">Provides items for giveaways and content creation</p>
+                                            <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=50" target="_blank" class="jo-btn">
+                                                Donate $50
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div style="padding: 25px; background: linear-gradient(135deg, #fff5f7 0%, #fff 100%); border-radius: 15px; height: 100%; border-left: 4px solid var(--jo-primary-color);">
-                                        <h5 style="color: var(--jo-primary-color); font-weight: 700; margin-bottom: 12px; font-size: 20px;">
-                                            <i class="flaticon-network" style="margin-right: 10px;"></i>Community Events
-                                        </h5>
-                                        <p style="margin: 0; line-height: 1.7; color: #666;">Meet and greets to connect entrepreneurs, share experiences, and build lasting support networks</p>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="donation-card">
+                                            <div class="donation-card-title">$100</div>
+                                            <div style="font-size: 14px; color: #db2777; font-weight: 600; margin-bottom: 15px;">Community Builder</div>
+                                            <p class="donation-card-subtitle">Helps fund events, meet and greets, and community initiatives</p>
+                                            <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=100" target="_blank" class="jo-btn">
+                                                Donate $100
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <p class="text-center" style="font-size: 18px; max-width: 900px; margin: 0 auto 50px; line-height: 1.8;">Every donation helps me give small business owners the tools, guidance, and opportunities they need to succeed.</p>
 
-                            <h3 class="text-center mt-5 mb-4" style="font-size: 32px; font-weight: 700;">Suggested Support Levels</h3>
-                            <div class="row g-4 mb-5" style="max-width: 1100px; margin: 0 auto;">
-                                <div class="col-md-6">
-                                    <div class="jo-service-box" style="padding: 40px; background: #fff; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                                        <h4 style="color: var(--jo-primary-color); font-size: 28px; font-weight: 700; margin-bottom: 15px;">$10 Community Member</h4>
-                                        <p style="margin-bottom: 25px; font-size: 16px; line-height: 1.7; color: #666;">Helps fund educational resources and small business guides</p>
-                                        <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=10" target="_blank" class="jo-btn" style="padding: 15px 40px; font-size: 16px; width: 100%; display: inline-block;">
-                                            Donate $10
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="jo-service-box" style="padding: 40px; background: #fff; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                                        <h4 style="color: var(--jo-primary-color); font-size: 28px; font-weight: 700; margin-bottom: 15px;">$25 Community Ally</h4>
-                                        <p style="margin-bottom: 25px; font-size: 16px; line-height: 1.7; color: #666;">Supports essential tools and starter equipment for entrepreneurs</p>
-                                        <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=25" target="_blank" class="jo-btn" style="padding: 15px 40px; font-size: 16px; width: 100%; display: inline-block;">
-                                            Donate $25
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="jo-service-box" style="padding: 40px; background: #fff; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                                        <h4 style="color: var(--jo-primary-color); font-size: 28px; font-weight: 700; margin-bottom: 15px;">$50 Community Booster</h4>
-                                        <p style="margin-bottom: 25px; font-size: 16px; line-height: 1.7; color: #666;">Provides items for giveaways and content creation</p>
-                                        <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=50" target="_blank" class="jo-btn" style="padding: 15px 40px; font-size: 16px; width: 100%; display: inline-block;">
-                                            Donate $50
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="jo-service-box" style="padding: 40px; background: #fff; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                                        <h4 style="color: var(--jo-primary-color); font-size: 28px; font-weight: 700; margin-bottom: 15px;">$100 Community Builder</h4>
-                                        <p style="margin-bottom: 25px; font-size: 16px; line-height: 1.7; color: #666;">Helps fund events, meet and greets, and community-building initiatives</p>
-                                        <a href="https://www.paypal.com/donate/?hosted_button_id=NCCVR63ZH8DJL&amount=100" target="_blank" class="jo-btn" style="padding: 15px 40px; font-size: 16px; width: 100%; display: inline-block;">
-                                            Donate $100
-                                        </a>
-                                    </div>
-                                </div>
+                            <!-- Transparency -->
+                            <div style="margin-top: 80px; padding: 50px; background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%); border-radius: 15px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                                <h3 class="section-title" style="margin-bottom: 30px;">Transparency</h3>
+                                <p class="section-subtitle" style="margin: 0;">I use every donation directly to help small business owners with tools, education, and opportunities. I send email updates with stories and photos so you can see the real impact of your support.</p>
                             </div>
-
-                            <h3 class="text-center mt-5 mb-4" style="font-size: 32px; font-weight: 700;">Transparency</h3>
-                            <p class="text-center" style="font-size: 18px; max-width: 900px; margin: 0 auto 50px; line-height: 1.8;">I use every donation directly to help small business owners with tools, education, and opportunities. I send email updates with stories and photos so you can see the real impact of your support.</p>
-
-                            <h3 class="text-center mt-5 mb-4" style="font-size: 32px; font-weight: 700;">Stay Connected</h3>
-                            <p class="text-center" style="font-size: 18px; max-width: 900px; margin: 0 auto 40px; line-height: 1.8;">Subscribe to my email list to hear about small businesses I support, upcoming giveaways, events, and success stories.</p>
                         </div>
                     </div>
                 </div>
@@ -331,13 +489,13 @@
         <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
         <script src="assets/vendor/splide/splide.min.js"></script>
-        <script src="assets/vendor/splide-extension-auto-scroll.min.js"></script>
-        <script src="assets/vendor/slim-select/slimselect.min.js"></script>
-        <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
-        <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
-        <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
 
-        <!-- custom js -->
+
+
+
+
+
+        <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>        <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>        <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>        <script src="assets/vendor/slim-select/slimselect.min.js"></script>        <script src="assets/vendor/splide-extension-auto-scroll.min.js"></script>        <!-- custom js -->
         <script src="assets/js/main.js"></script>
         <script src="assets/js/accordion.js"></script>
 </body>
