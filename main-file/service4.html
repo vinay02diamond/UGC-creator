@@ -26,6 +26,33 @@
         .jo-btn:hover::before {
             opacity: 0.8 !important;
         }
+
+        /* Fix for footer vertical lines */
+        .jo-footer {
+            border: none; /* Ensure no borders are applied */
+        }
+
+        /* Enhanced Card Styling */
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Enhanced button hover */
+        .pricing-card .jo-btn {
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .pricing-card .jo-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(219, 39, 119, 0.3);
+        }
     </style>
 </head>
 
@@ -146,7 +173,7 @@
                 </div>
                 <div class="row g-4 row-cols-1 row-cols-md-2">
                     <div class="col">
-                        <div class="jo-article jo-inner-service">
+                        <div class="jo-article jo-inner-service pricing-card">
                             <div class="jo-article__txt">
                                 <h4 class="jo-article__title">Under 1K Followers</h4>
                                 <p class="jo-service-descr fw-semibold">Price $50</p>
@@ -157,7 +184,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="jo-article jo-inner-service">
+                        <div class="jo-article jo-inner-service pricing-card">
                             <div class="jo-article__txt">
                                 <h4 class="jo-article__title">1K to 3K Followers</h4>
                                 <p class="jo-service-descr fw-semibold">Price $85</p>
@@ -168,7 +195,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="jo-article jo-inner-service">
+                        <div class="jo-article jo-inner-service pricing-card">
                             <div class="jo-article__txt">
                                 <h4 class="jo-article__title">3K to 6K Followers</h4>
                                 <p class="jo-service-descr fw-semibold">Price $120</p>
@@ -179,7 +206,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="jo-article jo-inner-service">
+                        <div class="jo-article jo-inner-service pricing-card">
                             <div class="jo-article__txt">
                                 <h4 class="jo-article__title">6K to 10K Followers</h4>
                                 <p class="jo-service-descr fw-semibold">Price $180</p>

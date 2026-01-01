@@ -31,6 +31,28 @@
         .jo-footer {
             border: none; /* Ensure no borders are applied */
         }
+
+        /* Enhanced Card Styling */
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Enhanced button hover */
+        .pricing-card .jo-btn {
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .pricing-card .jo-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(219, 39, 119, 0.3);
+        }
     </style>
 </head>
 
@@ -154,7 +176,7 @@
                         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                     <!-- Yonkers -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -171,7 +193,7 @@
 
                     <!-- Mount Vernon -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -188,7 +210,7 @@
 
                     <!-- New Rochelle -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -205,7 +227,7 @@
 
                     <!-- White Plains -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -222,7 +244,7 @@
 
                     <!-- The Bronx -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -239,7 +261,7 @@
 
                     <!-- Harlem -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -256,7 +278,7 @@
 
                     <!-- Brooklyn -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">
@@ -273,7 +295,7 @@
 
                     <!-- Queens -->
                     <div class="col-xxs-12">
-                        <div class="jo-article jo-inner-service rounded-3 p-3">
+                        <div class="jo-article jo-inner-service rounded-3 p-3 pricing-card">
                             <div class="jo-article__txt">
                                 <div class="jo-article__infos flex gap-x-[16px] mb-[12px]">
                                     <div class="jo-article__info">

@@ -254,6 +254,53 @@
             background: linear-gradient(90deg, #667eea, #f093fb, #f5576c);
             box-shadow: 0 6px 16px rgba(245, 87, 108, 0.35);
         }
+
+        /* Marquee Styling */
+        .marquee-section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .marquee-row {
+            margin: 40px 0;
+            overflow: hidden;
+            background: #f8f9fa;
+            padding: 20px 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 30px;
+            will-change: transform;
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(calc(-1 * (200px + 30px) * 8));
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-1 * (200px + 30px) * 8));
+            }
+        }
+
+        .marquee-right .marquee-track {
+            animation: scrollRight linear infinite;
+            animation-duration: var(--speed, 40s);
+        }
+
+        .marquee-left .marquee-track {
+            animation: scrollLeft linear infinite;
+            animation-duration: var(--speed, 40s);
+        }
     </style>
 </head>
 
@@ -346,7 +393,7 @@
             <div class="container">
                 <h1 class="jo-page-title jo-section-title">Promos</h1>
                 <ul class="jo-breadcrumb-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a>
                     <li><span>/</span></li>
                     <li class="current-page">Support us</li>
                 </ul>
@@ -440,51 +487,48 @@
     <div class="jo-container">
     <h2 class="jo-section-title featured-title text-center">HOLIDAY PROMOS</h2>
   </div>
-  <div class="marquee-row marquee-right" data-speed="42">
-    <!-- <div class="marquee-track">
-      <img src="assets/img/pi16.jpg" alt="">
-      <img src="assets/img/pi17.jpg" alt="">
-      <img src="assets/img/pi18.jpg" alt="">
-      <img src="assets/img/pi19.jpg" alt="">
-      <img src="assets/img/pi20.jpg" alt="">
-      <img src="assets/img/pi21.jpg" alt="">
-      <img src="assets/img/pi22.jpg" alt="">
-      <img src="assets/img/pi23.jpg" alt="">
-      <img src="assets/img/pi24.jpg" alt="">
-      <img src="assets/img/pi25.jpg" alt="">
-         Duplicate images for smooth loop
-      <!-- <img src="assets/img/pi27.jpg" alt="">
-      <img src="assets/img/pi28.jpg" alt="">
-      <img src="assets/img/pi29.jpg" alt="">
-      <img src="assets/img/pi30.jpg" alt="">
-      <img src="assets/img/pi31.jpg" alt="">
-      <img src="assets/img/pi32.jpg" alt="">
-      <img src="assets/img/pi33.jpg" alt="">
-      <img src="assets/img/pi816.jpg" alt="">
-      <img src="assets/img/pi20.jpg" alt="">
-      <img src="assets/img/pi19.jpg" alt="">
-    </div>
-  </div> --> 
 
-  <div class="marquee-row marquee-left" data-speed="38">
+  <div class="marquee-row marquee-right" data-speed="50">
+     <div class="marquee-track">
+       <img src="assets/img/9.jpg" alt="Promo 1">
+       <img src="assets/img/10.jpg" alt="Promo 2">
+       <img src="assets/img/11.jpg" alt="Promo 3">
+       <img src="assets/img/12.jpg" alt="Promo 4">
+       <img src="assets/img/13.jpg" alt="Promo 5">
+       <img src="assets/img/14.jpg" alt="Promo 6">
+       <img src="assets/img/15.jpg" alt="Promo 7">
+       <img src="assets/img/16.jpg" alt="Promo 8">
+       <!-- Duplicate for seamless loop -->
+       <img src="assets/img/9.jpg" alt="Promo 1">
+       <img src="assets/img/10.jpg" alt="Promo 2">
+       <img src="assets/img/11.jpg" alt="Promo 3">
+       <img src="assets/img/12.jpg" alt="Promo 4">
+       <img src="assets/img/13.jpg" alt="Promo 5">
+       <img src="assets/img/14.jpg" alt="Promo 6">
+       <img src="assets/img/15.jpg" alt="Promo 7">
+       <img src="assets/img/16.jpg" alt="Promo 8">
+    </div>
+  </div> 
+
+  <div class="marquee-row marquee-left" data-speed="45">
     <div class="marquee-track">
-      <img src="assets/img/1.jpg" alt="">
-      <img src="assets/img/2.jpg" alt="">
-      <img src="assets/img/3.jpg" alt="">
-      <img src="assets/img/4.jpg" alt="">
-      <img src="assets/img/5.jpg" alt="">
-      <img src="assets/img/6.jpg" alt="">
-      <img src="assets/img/7.jpg" alt="">
-      <img src="assets/img/8.jpg" alt=""> 
-            <!-- Duplicate images for smooth loop -->
-      <img src="assets/img/9.jpg" alt="">
-      <img src="assets/img/10.jpg" alt="">
-      <img src="assets/img/11.jpg" alt="">
-      <img src="assets/img/12.jpg" alt="">
-      <img src="assets/img/13.jpg" alt="">
-      <img src="assets/img/14.jpg" alt="">
-      <img src="assets/img/15.jpg" alt="">
-      <img src="assets/img/16.jpg" alt="">
+      <img src="assets/img/1.jpg" alt="Holiday 1">
+      <img src="assets/img/2.jpg" alt="Holiday 2">
+      <img src="assets/img/3.jpg" alt="Holiday 3">
+      <img src="assets/img/4.jpg" alt="Holiday 4">
+      <img src="assets/img/5.jpg" alt="Holiday 5">
+      <img src="assets/img/6.jpg" alt="Holiday 6">
+      <img src="assets/img/7.jpg" alt="Holiday 7">
+      <img src="assets/img/8.jpg" alt="Holiday 8">
+      <!-- Duplicate for seamless loop -->
+      <img src="assets/img/1.jpg" alt="Holiday 1">
+      <img src="assets/img/2.jpg" alt="Holiday 2">
+      <img src="assets/img/3.jpg" alt="Holiday 3">
+      <img src="assets/img/4.jpg" alt="Holiday 4">
+      <img src="assets/img/5.jpg" alt="Holiday 5">
+      <img src="assets/img/6.jpg" alt="Holiday 6">
+      <img src="assets/img/7.jpg" alt="Holiday 7">
+      <img src="assets/img/8.jpg" alt="Holiday 8">
     </div>
   </div>
 </section>
@@ -559,8 +603,6 @@
         </div>
     </footer>
 
-
-
     <!-- libraries JS -->
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
@@ -570,21 +612,11 @@
     <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
     <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
     <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
-    
-        <!-- custom js -->
-        <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/splide/splide.min.js"></script>
-        <script src="assets/vendor/splide-extension-auto-scroll.min.js"></script>
-        <script src="assets/vendor/slim-select/slimselect.min.js"></script>
-        <script src="assets/vendor/plyr/plyr.polyfilled.js"></script>
-        <script src="assets/vendor/no-ui-slider/nouislider.min.js"></script>
-        <script src="assets/vendor/fs-lightbox/fslightbox.js"></script>
 
-        <!-- custom js -->
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/accordion.js"></script>
-        <script>
+    <!-- custom js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/accordion.js"></script>
+    <script>
       document.querySelectorAll('.marquee-row').forEach(row => {
         const speed = row.getAttribute('data-speed');
         if (speed) row.style.setProperty('--speed', `${speed}s`);
