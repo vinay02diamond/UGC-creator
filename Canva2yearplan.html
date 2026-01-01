@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="main-file/assets/font/flaticon_jio_-_influencer.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/plyr/plyr.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet" href="main-file/assets/vendor/no-ui-slider/nouislider.min.css">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="main-file/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style2.css"> -->
+    <style>
+        /* Thank-you styling */
+        .thankyou-card {
+            background: linear-gradient(135deg, #fff6f6 0%, #ffe0e0 100%);
+            border: 1px solid #ffced4;
+            border-radius: 18px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 18px 45px rgba(255, 58, 58, 0.12);
+        }
+
+        .jo-thankyou-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            margin-bottom: 14px;
+            background: #ff4d5a;
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            box-shadow: 0 8px 20px rgba(255, 77, 90, 0.35);
+        }
+
+        .jo-thankyou-title {
+            color: #d62828;
+            letter-spacing: -0.3px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 576px) {
+            .thankyou-card {
+                padding: 2.25rem 1.5rem;
+            }
+
+            .jo-thankyou-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="jo-sidebar">
+        <div>
+            <!-- heading -->
+            <div class="jo-sidebar__heading d-flex justify-content-between align-items-center">
+                <a href="#"><img src="main-file/assets/img/logo.svg" alt="logo" class="logo"></a>
+                <button type="button" class="jo-sidebar-close-btn"><i class="flaticon-add-plus-button"></i></button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="jo-header-nav-in-mobile"></div>
+        </div>
+
+        <div>
+            <a href="main-file/about.html" class="jo-btn"><i class="flaticon-add-plus-button"></i>Follow Me</a>
+            <!-- socials -->
+            <div class="tt-footer-top__socials jo-footer-top__socials jo-sidebar-socials justify-content-start justify-content-sm-end">
+                <a href="#"><i class="flaticon-facebook-1"></i></a>
+                <a href="#"><i class="flaticon-twitter"></i></a>
+                <a href="#"><i class="flaticon-social-media"></i></a>
+                <a href="#"><i class="flaticon-youtube-1"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER SECTION START -->
+    <header class="jo-header jo-inner-header">
+        <a href="main-file/index.html"><img src="main-file/assets/img/logo.svg" alt="logo"></a>
+        <div class="jo-header-right">
+            <div class="jo-header-nav">
+                <div class="to-go-to-sidebar-in-mobile">
+                    <nav>
+                        <a href="main-file/index.html">Home</a>
+                        <a href="main-file/about.html">About Me</a>
+                        <div class="has-sub-menu relative">
+                            <!-- <a role="button">Streaming Videos</a> -->
+
+                            <!-- <ul class="jo-header-submenu">
+                                <li><a href="videos-1.html">Streaming Videos 1</a></li>
+                                <li><a href="videos-2.html">Streaming Videos 2</a></li>
+                                <li><a href="videos-3.html">Streaming Videos 3</a></li>
+                                <li><a href="video-details.html">Streaming Video Details</a></li>
+                            </ul> -->
+                        </div>
+                        <div class="has-sub-menu relative">
+                            <!-- <a role="button">Pages</a> -->
+
+                            <!-- <ul class="jo-header-submenu">
+                                <li><a href="video-shop.html">Video Shop</a></li>
+                                <li><a href="video-shop-details.html">Video Shop Details</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="register.html">Sign Up</a></li>
+                                <li><a href="login.html">Sign in</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                            </ul> -->
+                        </div>
+                        <div class="has-sub-menu relative">
+                            <!-- <a role="button">Blog</a> -->
+
+                            <!-- <ul class="jo-header-submenu">
+                                <li><a href="blog.html">Blogs</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul> -->
+                        </div>
+                        <a href="main-file/contact.html">Contact</a>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="main-file/about.html" class="jo-btn"><i class="flaticon-add-plus-button"></i>Follow Me</a>
+                <button class="jo-header-sidebar-open-btn jo-btn px-3 d-inline-block d-lg-none"><i class="flaticon-menu"></i></button>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+    <main>
+        <!-- BREADCRUMB SECTION START -->
+        <section class="jo-breadcrumb">
+            <div class="container">
+                <h1 class="jo-page-title jo-section-title">Educational courses</h1>
+                <ul class="jo-breadcrumb-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><span>/</span></li>
+                    <li class="current-page">PDF Files</li>
+                </ul>
+
+                <div class="jo-circle-box">
+                    <span class="circle-1"><img src="assets/img/social-icon-1.png" alt="Social Media Icon"></span>
+                    <span class="circle-2"><img src="assets/img/social-icon-2.png" alt="Social Media Icon"></span>
+                    <span class="circle-3"><img src="assets/img/social-icon-3.png" alt="Social Media Icon"></span>
+                    <span class="circle-4"><img src="assets/img/social-icon-4.png" alt="Social Media Icon"></span>
+                </div>
+            </div>
+        </section>
+        <!-- BREADCRUMB SECTION END -->
+
+        <!-- PHOTO & DOWNLOAD SECTION START -->
+        <section class="jo-photo-download-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="jo-download-card thankyou-card text-center">
+                            <!-- Heading -->
+                            <div class="jo-thankyou-badge"><i class="flaticon-add-plus-button"></i> Purchase confirmed</div>
+                            <h1 class="jo-section-title jo-thankyou-title">Thank you for purchasing the product!</h1>
+                            <h2 class="jo-section-title mb-4" style="color: #b0232a;">Canva Pro 2 year plan + Learn Canva in 30 days tutorials</h2>
+
+                            <!-- Photo -->
+                            <div class="mb-4">
+                                <img src="assets/img/Learn1.png" alt="Download Photo" style="width: 100%; max-width: 600px; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="mb-4">
+                                <p style="font-size: 16px; color: #333; line-height: 1.6;">
+                                   Get Canva Pro for 2 year at just $45 + $19 E-book on Video tutorials to learn Canva in 30 days for free
+                            </div>
+
+                            <!-- Download Button -->
+                            <a href="assets/img/Canva_2yearplan.pdf" download="Canva 1 Year Plan + Bonus.pdf" class="jo-btn">
+                                <i class="flaticon-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PHOTO & DOWNLOAD SECTION END -->
+    </main>
+    <!-- FOOTER SECTION START -->
+    <footer class="jo-footer">
+        <div class="jo-container">
+            <!-- footer top -->
+            <div class="jo-footer-top">
+                <div class="row gx-4 gy-sm-5 gy-4 align-items-center">
+                    <div class="col-lg-3 col-6 col-xxs-12">
+                        <a href="index.html"><img src="assets/img/logo-white.svg" alt="logo" class="logo"></a>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 order-2">
+                        <!-- nwsltr -->
+                        <form action="#" class="jo-footer-top__nwsltr">
+                            <input type="email" name="jo-nwsltr-email" id="jo-nwsltr-email" placeholder="Email Address">
+                            <button class="jo-btn" type="submit">Get Newsletter</button>
+                        </form>
+                    </div>
+                    <!-- socials -->
+                    <div class="col-lg-3 col-6 col-xxs-12 order-lg-2 order-1">
+                        <div class="tt-footer-top__socials jo-footer-top__socials justify-content-start justify-content-sm-end">
+                            <a href="#"><i class="flaticon-facebook-1"></i></a>
+                            <a href="#"><i class="flaticon-twitter"></i></a>
+                            <a href="#"><i class="flaticon-social-media"></i></a>
+                            <a href="#"><i class="flaticon-youtube-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer middle -->
+           <div class="jo-footer-middle">
+                <div class="row g-4">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-contact">
+                            <h5 class="jo-footer-widget__title">Get in Touch</h5>
+                            <a href="mailto:contact.me@gmail.com">reviewsbytianni@outlook.com</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-gallery">
+                            <h5 class="jo-footer-widget__title">Instagram feed</h5>
+                            <div class="imgs flex-wrap">
+                                <img src="assets/img/footer-img-1.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-2.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-3.png" alt="Footer Image">
+                                <img src="assets/img/footer-img-4.png" alt="Footer Image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6">
+                        <div class="jo-footer-widget jo-footer-links">
+                            <h5 class="jo-footer-widget__title">Policies</h5>
+                            <div class="links">
+                                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer bottom -->
+            <div class="tt-footer-bottom text-center">
+                <p class="mb-0 footer-credit">Copyright ©2026 Developed by&nbsp;<a class="mod360" href="https://modern360technology.com/" target="_blank" rel="noopener">Modern360Technology</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+
+    <!-- libraries JS -->
+    <script src="main-file/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="main-file/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="main-file/assets/vendor/splide/splide.min.js"></script>
+    <script src="main-file/assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="main-file/assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="main-file/assets/vendor/plyr/plyr.polyfilled.js"></script>
+    <script src="main-file/assets/vendor/no-ui-slider/nouislider.min.js"></script>
+    <script src="main-file/assets/vendor/fs-lightbox/fslightbox.js"></script>
+
+    <!-- custom js -->
+    <script src="main-file/assets/js/main.js"></script>
+    <script src="main-file/assets/js/accordion.js"></script>
+    <script src="main-file/assets/js/tab.js"></script>
+</body>
+
+</html>
